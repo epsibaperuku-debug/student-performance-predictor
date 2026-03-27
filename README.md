@@ -5,4 +5,4 @@ This is a machine learning project that predicts student performance based on st
 - Pandas
 - Scikit-learn
 ## Status
-Currently in progress 🚀
+Currently in progress 
