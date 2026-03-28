@@ -17,22 +17,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 # Train model
 model = LinearRegression()
 model.fit(X_train, y_train)
+print("\n--- Student Performance Predictor ---")
 
-# Predict
-y_pred = model.predict(X_test)
+study_hours = float(input("Enter study hours: "))
+attendance = float(input("Enter attendance: "))
 
-# Accuracy
-accuracy = r2_score(y_test, y_pred)
-print("Model Accuracy:", accuracy)
+new_data = pd.DataFrame([[study_hours, attendance]], 
+                        columns=['study_hours', 'attendance'])
 
-# Predict new value
-new_data = pd.DataFrame([[6, 85]], columns=['study_hours', 'attendance'])
 prediction = model.predict(new_data)
-print("Predicted Marks:", prediction)
 
-# Plot graph
-plt.scatter(df['study_hours'], df['marks'])
-plt.xlabel("Study Hours")
-plt.ylabel("Marks")
-plt.title("Study Hours vs Marks")
-plt.show()
+print("Predicted Marks:", prediction)
+print("\nThank you for using the predictor!")
