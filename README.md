@@ -1,8 +1,14 @@
-# Student Performance Predictor
-This is a machine learning project that predicts student performance based on study hours and attendance.
+## Project Description
+This project predicts student performance based on study hours and attendance using Machine Learning.
+
+## Features
+- Uses real dataset (CSV)
+- Linear Regression model
+- Calculates accuracy
+- Visualizes data using graphs
+
 ## Tech Used
 - Python
 - Pandas
 - Scikit-learn
-## Status
-Currently in progress 
+- Matplotlib
